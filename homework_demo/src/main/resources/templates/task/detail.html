@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<div style="text-align: center;"></div>
+<head>
+    <meta charset="UTF-8">
+    <title>考核详情页</title>
+</head>
+<body>
+    <h2>考核名称:</h2>
+    <p th:text="${task.getTaskName()}"></p>
+    <h2>考核内容:</h2>
+    <p th:text="${task.getContent()}"></p>
+    <h2>截止日期:</h2>
+    <p th:text="${task.getDeadline()}"></p>
+    <a class="btn btn-sm btn-success"th:href="@{'/toupdate/'+${task.getId()}}">修改内容</a>
+    <a class="btn btn-sm btn-success"th:href="@{'/view/'+${task.getId()}}">查看作业提交情况</a>
+</body>
+</html>
